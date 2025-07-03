@@ -3665,7 +3665,7 @@ button.list-group-item-danger.active:focus {
 
 .navbar-brand .navbar-brand-media-img {
   display: none;
-  height: 16px;
+  max-height: 64px;
 }
 
 .navbar-brand-has-media {
