@@ -6,9 +6,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kumala Group Hotspot</title>
-    $(if refresh-timeout)
+ 
     <meta http-equiv="refresh" content="$(refresh-timeout-secs)">
-    $(endif)
+    
     <link rel="icon" href="assets/img/favicon.png">
     <link rel="apple-touch-icon" href="assets/img/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
@@ -119,8 +119,7 @@ ig          : @alpuketmerah
                                 $(endif)
                                 $(if limit-bytes-out == '')Unlimited$(endif)</td>
                             </tr>
-                            $(endif)
-                            $(if refresh-timeout)
+                           
                             <tr>
                               <td>Status refresh</td>
                               <td>$(refresh-timeout)</td>
