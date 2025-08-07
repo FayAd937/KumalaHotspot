@@ -1,11 +1,28 @@
 ﻿<!DOCTYPE html>
 <html lang="en" class="no-js">
+  <style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .centered-login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+</style>
+
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Kumala Group Hotspot</title>
+    
     <link rel="icon" href="assets/img/favicon.png">
     <link rel="apple-touch-icon" href="assets/img/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
@@ -25,7 +42,7 @@
     ig          : @alpuketmerah
     ====================================================== 
     -->
-    $(if chap-id)
+    
     <form name="sendin" action="$(link-login-only)" method="post">
       <input type="hidden" name="username" />
       <input type="hidden" name="password" />
@@ -43,7 +60,7 @@
         }
     //-->
     </script>
-    $(endif)
+   
     <div class="site">
       <div id="site_loader" class="site-loader">
         <div class="spinner"><span class="bounce"></span><span class="bounce"></span><span class="bounce"></span></div>
@@ -64,8 +81,10 @@
             </div>
           </nav>
         </div>
-        <div id="site_content" class="site-content">
-          <div id="page_intro_section" style="height: 100vh" class="align align-middle page-intro-section page-intro-section-md section section-md">
+        <div id="site_content" class="site-content" style="padding: 0; margin: 0;">
+
+          <div id="page_intro_section" style="height: 100vh; overflow: hidden; position: relative;" class="page-intro-section">
+
             <div data-bg-slideshow-src="assets/img/mobil-%.jpg" data-bg-slideshow-amount="6" data-slideshow-delay="7000" data-bg-slideshow-animation="kenburns" class="bg-slideshow"></div>
           <div id="page_intro_section" style="height:100vh;"  class="align align-middle page-intro-section page-intro-section-md section section-md">
             <div data-bg-slideshow-src="assets/img/mobil-%.jpg" data-bg-slideshow-amount='6' data-slideshow-delay='7000' data-bg-slideshow-animation="kenburns" class="bg-slideshow"></div>
@@ -104,7 +123,7 @@
                                 <p><font color="#20b2d6">Terjadi kesalahan: </font><font color="#fff">$(error)</font></p>
                               </div>
                             </div>
-                            $(endif)
+                           
                             <div class="col-md-8">
                               <div class="form-group mb-0">
                                 <button type="submit" class="btn btn-block btn-primary">
@@ -133,7 +152,7 @@
     <script src="assets/js/vendor.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/demo.js"></script>
-    $(if chap-id)
+   
     <script type="text/javascript" src="md5.js"></script>
     <script type="text/javascript">
       $("#loginForm").submit(function () {
@@ -141,7 +160,7 @@
         password.val(hexMD5("$(chap-id)" + password.val() + "$(chap-challenge)"));
       });
     </script>
-    $(endif)
+   
     <script>
       $("#menu-toggle").click(function (e) {
         e.preventDefault();
